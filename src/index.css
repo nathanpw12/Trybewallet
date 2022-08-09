@@ -21,7 +21,7 @@ input  {
   box-sizing: border-box;
   border: 2px solid #00c390;
   border-radius: 4px;
-  background-color: #00c390;
+  background-color: #006c54;
   color: white;
 }
 
@@ -49,10 +49,21 @@ button[disabled]{
   border: #0040dd;
   color: #ffffff;
   cursor: not-allowed;
+} 
+
+table {
+  border: white  solid 1px;
 }
 
-.header-conteiner{
-  display: flex;
+thead {
+  background-color: #006c54 ;
 }
 
+th , td {
+  width: 150px;
+  border: #00c390 solid 2px;
+}
 
+td {
+  text-align: center;
+}
