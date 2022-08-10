@@ -12,7 +12,7 @@ class Header extends Component {
           {email}
         </fieldset>
         <fieldset className="emailField" data-testid="total-field">
-          { sum }
+          { Math.abs(sum).toFixed(2) }
         </fieldset>
         <fieldset data-testid="header-currency-field">
           BRL

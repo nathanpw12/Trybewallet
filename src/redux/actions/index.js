@@ -1,11 +1,11 @@
 import getCurrentApi from '../../services/getCurrentApi';
 import {
-  ADD_EXPENSE,
-  LOGIN_SUBMIT,
+  ADD_EXPENSE, DELETE_BTN, LOGIN_SUBMIT,
   RECEIVE_API_ERROR,
   RECEIVE_API_SUCCESS,
   REQUEST_API,
   TOTAL_SUM,
+  UPDATE_SUM,
 } from './actionType';
 
 export const loginAction = (state) => ({ type: LOGIN_SUBMIT, state });
@@ -46,4 +46,14 @@ export const addExpenses = (state) => ({
 export const sumAction = (amount) => ({
   type: TOTAL_SUM,
   payload: amount,
+});
+
+export const deleteExpenseAction = (id) => ({
+  type: DELETE_BTN,
+  payload: id,
+});
+
+export const updateTotalAction = (value) => ({
+  type: UPDATE_SUM,
+  payload: value,
 });

@@ -1,4 +1,6 @@
-import { ADD_EXPENSE, RECEIVE_API_SUCCESS, TOTAL_SUM } from '../actions/actionType';
+import {
+  ADD_EXPENSE, DELETE_BTN, RECEIVE_API_SUCCESS, TOTAL_SUM, UPDATE_SUM,
+} from '../actions/actionType';
 
 const INITIAL_STATE = {
   currencies: [],
@@ -23,6 +25,16 @@ const wallet = (state = INITIAL_STATE, action) => {
     return {
       ...state,
       totalSum: state.totalSum + action.payload,
+    };
+  case DELETE_BTN:
+    return {
+      ...state,
+      expenses: state.expenses.filter((expense) => expense.id !== action.payload),
+    };
+  case UPDATE_SUM:
+    return {
+      ...state,
+      totalSum: state.totalSum - action.payload,
     };
   default:
     return state;
